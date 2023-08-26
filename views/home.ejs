@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div class="container">
+    <div class="flex-container">
+        <section id="feed-posts">
+            <div class="container">
+                <h1>Posts</h1>
+                <% if(locals.user) { %>
+                    
+                    <form id="new-post-form" action="/posts/create" method="POST">
+                        <div class="form-group">
+                            <label for="post-content">Content</label>
+                            <textarea id="post-content" name="content" placeholder="Type your post content" required></textarea>
+                        </div>
+                        <button type="submit">Post</button>
+                    </form>
+                <% } %>
+                <div class="post-list" id="posts-list-container">
+                    <% for(post of posts)  { %>
+                        <%- include('_post'); %>
+                    <% } %>
+            
+                </div>
+            </div>
+        </section>
+        
+        <div id="user-friend-container">
+            <% if(locals.user ) { %>
+                <section id="user-friends">
+                    <h2>Friends</h2>
+                    <ul class="friend-list">
+                        <% if(locals.user.friends === undefined || locals.user.friends.length == 0 ) { %>
+                            No friends found!
+                        <% } %>
+                        <% for(friend of locals.user.friends) { %>
+                            <% if(friend.from_user.id == locals.user.id){ %> 
+                                <li><a href="/users/profile/<%= friend.to_user._id %>"><%= friend.to_user.name %></a></li>
+                            <% } %>
+                            <% if(friend.to_user.id == locals.user.id){ %> 
+                                <li><a href="/users/profile/<%= friend.from_user._id %>"><%= friend.from_user.name %></a></li>
+                            <% } %>
+                        <% } %>
+                    </ul>
+                </section>
+            <% } %>
+            <section id="users">
+                <h2>Users</h2>
+                <ul class="user-list">
+                    <% for(u of all_users) { %>
+                        <li><a href="/users/profile/<%= u.id %>"><%= u.name %></a></li>
+                    <% } %>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+<%- include('_chatbox'); %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js" integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/chat_engine.js"></script>
+<script src="/js/home_posts.js"></script>
+<script src="js/toggle_likes.js"></script>
+<script>
+    $(' .post-likes').each(function(){
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+
+    $(' .comment-likes').each(function(){
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+
+    
+</script>
+<% if(locals.user) { %>
+    <script>
+        new ChatEngine('chat-box', '<%= locals.user.email %>')
+    </script>
+<% } %>

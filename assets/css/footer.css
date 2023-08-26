@@ -1,0 +1,17 @@
+#layout-footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  height: 50px; }
+  #layout-footer .left {
+    float: left; }
+  #layout-footer .right {
+    float: right; }
+    #layout-footer .right a {
+      color: #333;
+      text-decoration: none; }
+      #layout-footer .right a:hover {
+        text-decoration: underline; }
+      #layout-footer .right a:not(:last-child) {
+        margin-right: 5px; }

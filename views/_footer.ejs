@@ -1,0 +1,15 @@
+<footer id="layout-footer">
+    <div class="left">
+        &copy; Nikhil Lomate. All Rights Reserved
+    </div>
+
+    <div class="right">
+        <a href="/">Home</a>
+        <% if(locals.user) { %> 
+            <a href="/users/profile/<%= user.id %>">Profile</a>    
+        <% } else { %> 
+            <a href="/users/sign-in">Profile</a>
+        <% } %>
+        
+    </div>
+</footer>

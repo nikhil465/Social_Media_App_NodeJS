@@ -1,0 +1,23 @@
+.header {
+  background-color: #3b5998;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header .title {
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none; }
+  .header .links a {
+    color: #f1f1f1;
+    margin-left: 10px;
+    text-decoration: none; }
+    .header .links a:hover {
+      text-decoration: underline; }
+  .header .social-media a {
+    color: #3b5998;
+    margin-left: 10px;
+    text-decoration: none; }
+    .header .social-media a:hover {
+      text-decoration: underline; }

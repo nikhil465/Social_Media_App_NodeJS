@@ -1,0 +1,32 @@
+$primary-color: #f1f1f1; // Background color for footer
+$link-color: #333; // Link color for footer
+$footer-height: 50px; // Desired height for the footer
+
+#layout-footer {
+  background-color: $primary-color;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  height: $footer-height;
+  
+  .left {
+    float: left;
+  }
+  
+  .right {
+    float: right;
+    
+    a {
+      color: $link-color;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+      
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+}

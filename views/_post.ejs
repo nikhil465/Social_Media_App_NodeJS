@@ -1,0 +1,30 @@
+<div class="post" id = "post-<%= post._id %>">
+    <% if(locals.user && locals.user.id == post.user.id) { %>
+        <a href="/posts/destroy/<%= post.id %>" class="delete-post"><i class="fas fa-trash"></i></a>
+    <% } %>
+    <div class="user"><%= post.user.name %></div>
+    <div class="content"><%= post.content %></div>
+    <div class="post-likes">
+        <% if(locals.user) { %>
+            <a href="/likes/toggle?id=<%= post.id %>&type=Post" class="like-button"><i class="fas fa-thumbs-up"></i></a>
+        <% } %>
+        <span class="like-count"><%= post.likes.length %> Likes</span>
+    </div>
+    <% if(locals.user) { %>
+        <form class="comment-form" action="/comments/create" method="POST">
+            <textarea class="comment-input" name="comment" placeholder="Write a comment" required></textarea>
+            <input type="hidden" name="post" value="<%= post._id %>">
+            <button class="comment-submit" type="submit">Comment</button>
+        </form>
+    <% } %>
+
+    <% if(post.comments.length != 0) { %>
+        <div class="comments">
+            <p>Comments:</p>
+            <% for(comment of post.comments) {%>
+                <%- include('_comment'); %>
+            <% } %>
+        </div>
+    <% } %>
+    
+</div>

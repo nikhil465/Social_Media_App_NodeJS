@@ -1,0 +1,35 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+  .container .verify-email-form {
+    margin-top: 20px; }
+    .container .verify-email-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold; }
+    .container .verify-email-form input {
+      display: block;
+      width: 100%;
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px; }
+    .container .verify-email-form button {
+      padding: 8px 16px;
+      font-size: 14px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer; }
+      .container .verify-email-form button:hover {
+        background-color: #45a049; }
+
+h1 {
+  text-align: center;
+  color: #333; }

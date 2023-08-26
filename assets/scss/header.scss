@@ -1,0 +1,42 @@
+$header-bg-color: #3b5998;
+$header-text-color: #f1f1f1;
+$social-media-color: #3b5998;
+
+.header {
+  background-color: $header-bg-color;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    color: $header-text-color;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .links {
+    a {
+      color: $header-text-color;
+      margin-left: 10px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social-media {
+    a {
+      color: $social-media-color;
+      margin-left: 10px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

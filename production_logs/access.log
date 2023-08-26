@@ -1,0 +1,2 @@
+::1 - - [08/Aug/2023:11:35:35 +0000] "GET / HTTP/1.1" 200 4621 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [08/Aug/2023:11:35:55 +0000] "GET /users/profile/64d2249bb186a7e37b7e3c76 HTTP/1.1" 200 2415 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"

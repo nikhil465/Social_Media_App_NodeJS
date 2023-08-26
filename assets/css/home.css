@@ -1,0 +1,183 @@
+.container .flex-container {
+  display: flex; }
+  .container .flex-container #user-friend-container {
+    flex: 1; }
+    .container .flex-container #user-friend-container #user-friends {
+      margin-right: 20px; }
+      .container .flex-container #user-friend-container #user-friends h2 {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 10px; }
+      .container .flex-container #user-friend-container #user-friends .friend-list {
+        list-style: none; }
+        .container .flex-container #user-friend-container #user-friends .friend-list li {
+          margin-bottom: 5px; }
+          .container .flex-container #user-friend-container #user-friends .friend-list li a {
+            display: inline-block;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold; }
+            .container .flex-container #user-friend-container #user-friends .friend-list li a:hover {
+              text-decoration: underline; }
+    .container .flex-container #user-friend-container #users {
+      margin-right: 20px; }
+      .container .flex-container #user-friend-container #users h2 {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 10px; }
+      .container .flex-container #user-friend-container #users .user-list {
+        list-style: none; }
+        .container .flex-container #user-friend-container #users .user-list li {
+          margin-bottom: 5px; }
+          .container .flex-container #user-friend-container #users .user-list li a {
+            display: inline-block;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold; }
+            .container .flex-container #user-friend-container #users .user-list li a:hover {
+              text-decoration: underline; }
+  .container .flex-container #feed-posts {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px; }
+    .container .flex-container #feed-posts .container {
+      max-width: 600px;
+      margin: 0 auto; }
+      .container .flex-container #feed-posts .container h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px; }
+      .container .flex-container #feed-posts .container #new-post-form .form-group {
+        margin-bottom: 20px; }
+        .container .flex-container #feed-posts .container #new-post-form .form-group label {
+          display: block;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 5px; }
+        .container .flex-container #feed-posts .container #new-post-form .form-group textarea {
+          width: 100%;
+          padding: 10px;
+          font-size: 14px;
+          border: 1px solid #ccc;
+          border-radius: 4px; }
+      .container .flex-container #feed-posts .container #new-post-form button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; }
+        .container .flex-container #feed-posts .container #new-post-form button[type="submit"]:hover {
+          background-color: #45a049; }
+      .container .flex-container #feed-posts .container .post-list {
+        padding: 30px; }
+        .container .flex-container #feed-posts .container .post-list .post {
+          position: relative;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 10px;
+          margin-bottom: 20px; }
+          .container .flex-container #feed-posts .container .post-list .post .user {
+            font-weight: bold;
+            margin-bottom: 5px; }
+          .container .flex-container #feed-posts .container .post-list .post .content {
+            color: #666; }
+          .container .flex-container #feed-posts .container .post-list .post .comment-form {
+            margin-top: 10px; }
+            .container .flex-container #feed-posts .container .post-list .post .comment-form .comment-input {
+              width: 98%;
+              padding: 5px;
+              font-size: 14px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              resize: vertical; }
+            .container .flex-container #feed-posts .container .post-list .post .comment-form .comment-submit {
+              display: block;
+              width: 100%;
+              padding: 8px;
+              font-size: 14px;
+              background-color: #4CAF50;
+              color: #fff;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              margin-top: 5px; }
+              .container .flex-container #feed-posts .container .post-list .post .comment-form .comment-submit:hover {
+                background-color: #45a049; }
+          .container .flex-container #feed-posts .container .post-list .post .comments {
+            margin-top: 10px; }
+            .container .flex-container #feed-posts .container .post-list .post .comments p {
+              font-weight: bold; }
+            .container .flex-container #feed-posts .container .post-list .post .comments .comment {
+              display: flex;
+              align-items: flex-start;
+              margin-bottom: 10px;
+              position: relative; }
+              .container .flex-container #feed-posts .container .post-list .post .comments .comment .comment-content .comment-user {
+                font-weight: bold;
+                color: #333;
+                font-size: 12px;
+                display: inline-block; }
+              .container .flex-container #feed-posts .container .post-list .post .comments .comment .comment-content .comment-text {
+                margin-top: 5px;
+                color: #666;
+                font-size: 10px; }
+              .container .flex-container #feed-posts .container .post-list .post .comments .comment .comment-content .delete-comment {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: block;
+                margin-top: 10px;
+                padding: 5px 10px;
+                font-size: 14px;
+                background-color: #ff3d3d;
+                color: #fff;
+                border-radius: 4px;
+                text-decoration: none;
+                cursor: pointer; }
+                .container .flex-container #feed-posts .container .post-list .post .comments .comment .comment-content .delete-comment:hover {
+                  background-color: #ff0000; }
+          .container .flex-container #feed-posts .container .post-list .post .delete-post {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #ff3d3d;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer; }
+            .container .flex-container #feed-posts .container .post-list .post .delete-post:hover {
+              background-color: #ff0000; }
+          .container .flex-container #feed-posts .container .post-list .post .post-likes,
+          .container .flex-container #feed-posts .container .post-list .post .comment-likes {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; }
+            .container .flex-container #feed-posts .container .post-list .post .post-likes .like-button,
+            .container .flex-container #feed-posts .container .post-list .post .comment-likes .like-button {
+              padding: 5px 10px;
+              font-size: 14px;
+              color: #4CAF50;
+              text-decoration: none;
+              transition: color 0.3s ease; }
+              .container .flex-container #feed-posts .container .post-list .post .post-likes .like-button i,
+              .container .flex-container #feed-posts .container .post-list .post .comment-likes .like-button i {
+                font-size: 18px;
+                margin-right: 5px; }
+              .container .flex-container #feed-posts .container .post-list .post .post-likes .like-button:hover,
+              .container .flex-container #feed-posts .container .post-list .post .comment-likes .like-button:hover {
+                color: #45a049; }
+              .container .flex-container #feed-posts .container .post-list .post .post-likes .like-button.liked,
+              .container .flex-container #feed-posts .container .post-list .post .comment-likes .like-button.liked {
+                color: #45a049; }
+            .container .flex-container #feed-posts .container .post-list .post .post-likes .like-count,
+            .container .flex-container #feed-posts .container .post-list .post .comment-likes .like-count {
+              margin-left: 10px;
+              font-size: 14px; }

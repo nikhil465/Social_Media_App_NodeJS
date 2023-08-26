@@ -1,0 +1,15 @@
+<div class="comment">
+    <div class="comment-content">
+        <div class="comment-user"><%= comment.user.name %></div>
+        <div class="comment-text"><%= comment.content %></div>
+        <% if(locals.user && locals.user.id == comment.user.id) { %>
+            <a href="/comments/destroy/<%= comment.id %>" class="delete-comment"><i class="fas fa-trash"></i></a>
+        <% } %>
+        <div class="comment-likes">
+            <% if(locals.user) { %>
+                <a href="/likes/toggle?id=<%= comment.id %>&type=Comment" class="like-button"><i class="fas fa-thumbs-up"></i></a>
+            <% } %>
+            <span class="like-count"><%= comment.likes.length %> Likes</span>
+        </div>
+    </div>
+</div>

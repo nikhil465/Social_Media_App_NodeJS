@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+
+<div class="container">
+    <h1>Profile</h1>
+    <div class="profile-avatar">
+        <img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>">
+    </div>
+    <% if(user.id == profile_user.id) { %>
+        <div class="edit-profile">
+            <form class="edit-profile-form" action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<%= profile_user.name %>" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= profile_user.email %>" required>
+
+                <input type="file" name="avatar" placeholder="Profile Picture">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    
+    <% } else { %> 
+        <div class="profile-info">
+            <div class="info-item">
+                <span class="label">Name:</span>
+                <span class="value"><%= profile_user.name %></span>
+            </div>
+            <div class="info-item">
+                <span class="label">Email:</span>
+                <span class="value"><%= profile_user.email %></span>
+            </div>
+        </div>
+        <form action="/users/sign-out" method="GET">
+            <button type="submit">Sign Out</button>
+        </form>
+        <% let isFriend = false %>
+        <% for(let friend of locals.populated_user.friends){ %>
+            
+            <% if(friend.to_user == profile_user.id || friend.from_user == profile_user.id){ %>
+                <% isFriend = true %>
+            <% } %>
+        <% } %>
+        <% if(isFriend){%>
+            <a href="/friends/add-friend?id=<%= profile_user.id %>" class="add-friend-link friend">Remove Friend</a>
+        <% } else { %>
+            <a href="/friends/add-friend?id=<%= profile_user.id %>" class="add-friend-link">Add to Friend</a>
+            
+        <% } %>
+    <% } %>
+    
+</div>
