@@ -43,7 +43,3 @@ Codial is an ongoing project, and contributions are welcome. If you'd like to co
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-For questions or feedback, feel free to contact us at [your-email@example.com](mailto:your-email@example.com).
